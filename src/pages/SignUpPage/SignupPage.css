@@ -1,0 +1,10 @@
+.signup-page {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.signup-page h2 {
+    margin-bottom: 16px;
+}
