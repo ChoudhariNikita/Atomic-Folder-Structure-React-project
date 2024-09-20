@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Input from '../../atoms/Inputs/Input';
 import Button from '../../atoms/Buttons/Button';
 import './Forms.css';
+// import { signup } from '../../../services/AuthService/handleSignup';
 
 const SignupForm = () => {
     const [email, setEmail] = useState('');
@@ -9,8 +10,16 @@ const SignupForm = () => {
 
     const handleSignup = (e) => {
         e.preventDefault();
+        try{
+            // const userData = await signup(email, password);
+        }
+        catch (error) {
+            console.error('Signup failed:', error);
+        }
         console.log('Signup attempt with', { email, password });
     };
+
+    
 
     return (
         <form onSubmit={handleSignup} className="signup-form">

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Input from '../../atoms/Inputs/Input';
 import Button from '../../atoms/Buttons/Button';
 import './Forms.css';
+// import login from "../../../services/AuthService/handleLogin"
 
 const LoginForm = () => {
     const [email, setEmail] = useState('');
@@ -9,6 +10,12 @@ const LoginForm = () => {
 
     const handleLogin = (e) => {
         e.preventDefault();
+        try{
+            // const userData = await login(email, password);
+        }
+        catch (error) {
+            console.error('Login failed:', error);
+        }
         console.log('Login attempt with', { email, password });
     };
 

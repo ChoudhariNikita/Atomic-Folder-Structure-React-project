@@ -1,5 +1,5 @@
 import React from 'react';
-import NavLink from '../../atoms/NavLinks/NavLink';
+import NavLink from '../../atoms/Links/NavLinks/NavLink';
 import './Header.css';
 
 const Header = () => {
