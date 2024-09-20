@@ -1,0 +1,20 @@
+.profile-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.profile-page-content {
+    background-color: #fff;
+    max-width: fit-content;
+}
+
+.profile-page-content h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.profile-page-content p {
+    font-size: 16px;
+    line-height: 1.5;
+}

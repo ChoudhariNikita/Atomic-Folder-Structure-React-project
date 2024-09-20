@@ -1,19 +1,57 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import HomePage from './pages/HomePage/HomePage';
-import LoginPage from './pages/LoginPage/LoginPage';
-import SignupPage from './pages/SignUpPage/SignupPage';
+import React from "react";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import HomePage from "./pages/HomePage/HomePage";
+import LoginPage from "./pages/LoginPage/LoginPage";
+import SignupPage from "./pages/SignUpPage/SignupPage";
+import ProfilePage from "./pages/ProfilePage/ProfilePage";
+import SettingsPage from "./pages/ProfilePage/SettingsPage/SettingsPage";
+import PostsPage from "./pages/ProfilePage/PostsPage/PostsPage";
+import CommentsPage from "./pages/ProfilePage/CommentsPage/CommentsPage";
+import ErrorPage from "./pages/ErrorPage/ErrorPage";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <HomePage />,
+  },
+  {
+    path: "/login",
+    element: <LoginPage />,
+  },
+  {
+    path: "/signup",
+    element: <SignupPage />,
+  },
+  {
+    path: "/profile",
+    element: <ProfilePage />,
+    children: [
+      {
+        path: "settings",
+        element: <SettingsPage />,
+      },
+      {
+        path: "posts",
+        element: <PostsPage />,
+      },
+      {
+        path: "comments",
+        element: <CommentsPage />,
+      },
+    ],
+  },
+  {
+    path: "*",
+    element: <ErrorPage />,
+  },
+]);
 
 function App() {
-    return (
-        <Router>
-            <Routes>
-                <Route path="/" element={<HomePage />} />
-                <Route path="/login" element={<LoginPage />} />
-                <Route path="/signup" element={<SignupPage />} />
-            </Routes>
-        </Router>
-    );
+  return (
+    <React.StrictMode>
+      <RouterProvider router={router} />
+    </React.StrictMode>
+  );
 }
 
 export default App;

@@ -1,5 +1,5 @@
 import React from 'react';
-import NavLinks from '../../molecules/NavLinks/NavLink';
+import NavLink from '../../atoms/NavLinks/NavLink';
 import './Header.css';
 
 const Header = () => {
@@ -9,7 +9,7 @@ const Header = () => {
                 <h1 className="site-title">Blogify</h1>
             </div>
             <div className="header-right">
-                <NavLinks />
+                <NavLink />
             </div>
         </header>
     );

@@ -1,11 +1,13 @@
-.nav-link {
-    text-decoration: none;
-    color: #007bff;
-    font-size: 16px;
-    padding: 8px 16px;
-    border-radius: 4px;
+.nav-links {
+    display: flex;
+    gap: 16px;
 }
 
-.nav-link:hover {
-    text-decoration: underline;
+.nav-link{
+    text-decoration: none;
+    color: #007bff;
+    font-size: 18px;
+    padding: 8px 16px;
+    border-radius: 4px;
+
 }
